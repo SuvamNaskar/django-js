@@ -1,0 +1,21 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{{ page }}</title>
+    <link rel="stylesheet" href="{% static 'css/barba.css' %}">
+    <link rel="stylesheet" href="{% static 'css/index.css' %}">
+</head>
+<body data-barba="wrapper">
+
+    <div data-barba="container" data-barba-namespace="{% block namespace %}default{% endblock %}">
+        {% block page %}{% endblock %}
+    </div>
+
+    <script src="{% static 'js/gsap.js' %}"></script>
+    <script src="{% static 'js/barba.js' %}"></script>
+    <script src="{% static 'js/app.js' %}"></script>
+
+</body>
+</html>

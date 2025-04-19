@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block namespace %}home{% endblock %}
+
+{% block page %}
+
+    <div>
+        <h1>Hello from Django</h1>
+        <a href="{% url 'page1' %}">Page 1</a>
+    </div>
+
+    <img class="django-img" src="{% static 'img/img.png' %}">
+
+    <script src="{% static 'js/gsap.js' %}"></script>
+    <script src="{% static 'js/barba.js' %}"></script>
+    <script src="{% static 'js/app.js' %}"></script>
+
+{% endblock %}
