@@ -16,13 +16,13 @@ jobs:
         with:
           python-version: '3.13'
 
-      - name: Zip app for Elastic Beanstalk
-        run: zip -r app.zip . -x "*.git*" "*venv*" "*.idea*" "*__pycache__*" "*.DS_Store"
-
       - name: Install dependencies
         run: |
           python -m pip install --upgrade pip
           pip install -r requirements.txt
+
+      - name: Zip app for Elastic Beanstalk
+        run: zip -r app.zip . -x "*.git*" "*venv*" "*.idea*" "*__pycache__*" "*.DS_Store"
 
       - name: Deploy to Elastic Beanstalk
         uses: einaregilsson/beanstalk-deploy@v20
