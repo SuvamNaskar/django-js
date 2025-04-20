@@ -29,8 +29,8 @@ jobs:
         with:
           aws_access_key: ${{ secrets.AWS_ACCESS_KEY_ID }}
           aws_secret_key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
-          application_name: django-js
-          environment_name: Django-js-env
+          application_name: django-js-test
+          environment_name: Django-js-test-env
           version_label: ${{ github.sha }}
           region: ap-south-1
           deployment_package: app.zip
